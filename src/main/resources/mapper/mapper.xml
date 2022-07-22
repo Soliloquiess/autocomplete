@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <mapper namespace="com.project.coocon.mapper.mapper">
+  
+<select id="autocomplete" parameterType="map" resultType="map">
+	SELECT
+		 SEQ 
+		,SEARCH_WORD
+	FROM TEST
+	WHERE SEARCH_WORD LIKE  '%'|| #{value} || '%'
+</select>
+</mapper>
